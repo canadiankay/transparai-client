@@ -21,6 +21,8 @@ const Form = () => {
     painPoints: "",
   });
 
+  console.log(formData);
+
   const [apiState, setApiState] = useState({
     response: "",
     loading: false,

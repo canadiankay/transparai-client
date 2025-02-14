@@ -1,3 +1,5 @@
+@use "../../styles/partials/variables" as *;
+
 .response {
   height: 500px;
   width: 800px;
@@ -8,13 +10,19 @@
     border-color: #d1d1d1;
     border-bottom: 1px solid;
     padding: 1rem;
-    color: #767676;
+    color: rgba(64, 64, 64, 0.5);
     resize: none;
+    font-size: $p-font-regular;
 
     &:not(:placeholder-shown) {
       color: black;
       font-family: "Segoe UI", sans-serif;
-      font-size: 1rem;
+      font-size: $p-font-regular;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $primary-windows-blue;
     }
   }
 }
