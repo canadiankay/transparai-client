@@ -1,3 +1,7 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography";
+
 .resources {
     display: flex;
     flex-direction: column;
@@ -17,17 +21,23 @@
 
     &-title {
         align-items: center;
+        font-family: $font-base;
+        color: $primary-text-black
     }
 
     &-group__1 {
         border: 1px solid grey;
         border-radius: 1rem 1rem 1rem 0;
-        padding: 2rem;
+        padding: 3.5rem;
     }
 
     &-group__2 {
         border: 1px solid grey;
         border-radius: 1rem 0 1rem 1rem;
-        padding: 2rem;
+        padding: 3.5rem;
     }
+}
+
+.resource-blurb {
+    font-family: $font-base;
 }

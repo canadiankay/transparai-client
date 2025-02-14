@@ -1,4 +1,6 @@
-@use '../../styles/partials/variables' as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography";
 
 .nav {
     display: flex;
@@ -10,32 +12,64 @@
     &-left {
         display: flex;
         align-items: center;
-        margin-left: 1rem;
+        justify-content: center;
+        margin-left: 3.5rem;
     }
 
     &-right {
         display: flex;
         align-items: center;
-        margin-right: 1rem;
-    }
-
-    &-logo {
-        padding: 1rem;
-        border-right: 2px solid grey;
+        justify-content: center;
+        margin-right: 5rem;
     }
 
     &-text {
         margin: 0 0.625rem;
+        font-family: $font-base;
+        font-size: 1.05rem;
     }
+
+    &-list {
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+        padding: 0;
+    }
+}
+
+.nav-left__logo {
+    margin-right: 1.25rem;
+    border-right: 2px solid grey;
+    width: 8rem;
+}
+
+.nav-right__logos {
+    width: 1.25rem;
+}
+
+.nav-text__logo {
+    width: 1rem;
+    margin-left: -0.1rem;
 }
 
 .nav-subhead {
     width: 100%;
     text-align: center;
-    background-color: $primary-windows-blue;
+    background-color: #0076c3;
 
     &__text {
         color: white;
+        font-family: $font-base;
+        font-size: $h2-font-size;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__logo {
+        width: 1.5rem;
+        margin-top: 0.5rem;
+        filter: brightness(0) invert(1);
     }
 }
 
@@ -49,9 +83,4 @@
 .nav-right p {
     display: flex;
     align-items: center;
-}
-
-.nav-right img,
-.nav-left img {
-    margin-left: 0.3125rem;
 }

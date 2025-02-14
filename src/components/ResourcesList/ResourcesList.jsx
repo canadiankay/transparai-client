@@ -22,7 +22,7 @@ const blurbs = [
         url: "https://www.microsoft.com/en-us/research/group/ai-for-good-research-lab/"
     },
     {
-        text: "2024 Year in Review for Microsoft's AI research",
+        text: "2024 Year in Review for AI research",
         url: "https://www.microsoft.com/en-us/research/story/microsoft-research-2024-a-year-in-review/"
     }
 ];
@@ -34,7 +34,7 @@ function ResourcesList() {
 
     return (
         <div className="resources">
-            <h1 className="resources-title">Resources</h1>
+            <h1 className="resources-title">Resources:</h1>
             <div className="resources-container">
                 <div className="resources-group__1">
                     {firstGroup.map((blurb, index) => (
