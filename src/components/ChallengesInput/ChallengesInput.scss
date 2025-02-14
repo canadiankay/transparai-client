@@ -21,11 +21,13 @@
   }
 
   &__input-textarea {
+    height: 600px;
     all: unset; //will remove all default styles
     outline: none;
     overflow-y: hidden;
     overflow-x: hidden;
     resize: none;
+    border:1px solid #d1d1d1;
     @include input-element;
   }
 }

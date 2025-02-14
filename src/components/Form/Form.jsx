@@ -154,31 +154,37 @@ const Form = () => {
       {validationErrors.tools && (
         <div className="form__error-message">{validationErrors.tools}</div>
       )}
+      <div className="inputs">
+        <ChallengesInput
+          value={formData.painPoints}
+          onChange={handleChallengesChange}
+          error={validationErrors.painPoints}
+        />
+        {validationErrors.painPoints && (
+          <div className="form__error-message">
+            {validationErrors.painPoints}
+          </div>
+        )}
 
-      <ChallengesInput
-        value={formData.painPoints}
-        onChange={handleChallengesChange}
-        error={validationErrors.painPoints}
-      />
-      {validationErrors.painPoints && (
-        <div className="form__error-message">{validationErrors.painPoints}</div>
-      )}
+        <ResponseWindow className="response-window"
+          response={apiState.response}
+          loading={apiState.loading}
+        />
 
-      <ResponseWindow response={apiState.response} loading={apiState.loading} />
+        {apiState.error && (
+          <div className="form__error-message form__error-message--api">
+            An error occurred: {apiState.error}
+          </div>
+        )}
 
-      {apiState.error && (
-        <div className="form__error-message form__error-message--api">
-          An error occurred: {apiState.error}
-        </div>
-      )}
-
-      <button
-        onClick={handleSubmit}
-        disabled={apiState.loading}
-        className="form__submit-button"
-      >
-        {apiState.loading ? "Generating..." : "Get Recommendations"}
-      </button>
+        <button
+          onClick={handleSubmit}
+          disabled={apiState.loading}
+          className="form__submit-button"
+        >
+          {apiState.loading ? "Generating..." : "Get Recommendations"}
+        </button>
+      </div>
     </form>
   );
 };

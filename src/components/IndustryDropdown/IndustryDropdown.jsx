@@ -19,7 +19,7 @@ const IndustryDropdown = ({ selectedIndustry, onChange, error }) => {
   return (
     <div className="industry-dropdown">
       <h2 className="industry-dropdown__header">Select your industry</h2>
-      <p className="industry-dropdown__copy">Any additional copy</p>
+      <p className="industry-dropdown__copy">Choose the industry that best represents your business</p>
       <select
         className={`industry-dropdown__field ${error ? 'industry-dropdown__field--error' : ''}`}
         value={selectedIndustry}
