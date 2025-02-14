@@ -3,6 +3,8 @@ import axios from "axios";
 import ChallengesInput from "../ChallengesInput/ChallengesInput";
 import ResponseWindow from "../ResponseWindow/ResponseWindow";
 import "./Form.scss";
+import ProductsList from "../ProductsList/ProductsList";
+import IndustryDropdown from "../IndustryDropdown/IndustryDropdown";
 
 const API_URL = import.meta.env.VITE_API_URL;
 
@@ -10,26 +12,26 @@ const Form = () => {
   const [formData, setFormData] = useState({
     industry: "",
     tools: [],
-    painPoints: ""
+    painPoints: "",
   });
 
   const [validationErrors, setValidationErrors] = useState({
     industry: "",
     tools: "",
-    painPoints: ""
+    painPoints: "",
   });
 
   const [apiState, setApiState] = useState({
     response: "",
     loading: false,
-    error: null
+    error: null,
   });
 
   const validateForm = () => {
     const errors = {
       industry: "",
       tools: "",
-      painPoints: ""
+      painPoints: "",
     };
     let isValid = true;
 
@@ -57,125 +59,125 @@ const Form = () => {
 
   const handleChallengesChange = (event) => {
     const value = event.target.value;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      painPoints: value
+      painPoints: value,
     }));
-    
+
     if (value.trim()) {
-      setValidationErrors(prev => ({
+      setValidationErrors((prev) => ({
         ...prev,
-        painPoints: ""
+        painPoints: "",
       }));
     }
   };
 
   const handleIndustryChange = (industry) => {
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      industry
+      industry,
     }));
-    
+
     if (industry) {
-      setValidationErrors(prev => ({
+      setValidationErrors((prev) => ({
         ...prev,
-        industry: ""
+        industry: "",
       }));
     }
   };
 
   const handleToolsChange = (tools) => {
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      tools
+      tools,
     }));
-    
+
     if (tools.length > 0) {
-      setValidationErrors(prev => ({
+      setValidationErrors((prev) => ({
         ...prev,
-        tools: ""
+        tools: "",
       }));
     }
   };
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     if (!validateForm()) {
       return;
     }
 
-    setApiState(prev => ({
+    setApiState((prev) => ({
       ...prev,
       loading: true,
-      error: null
+      error: null,
     }));
 
     try {
       const response = await axios.post(`${API_URL}/api/openai`, formData);
-      
-      setApiState(prev => ({
+
+      setApiState((prev) => ({
         ...prev,
         loading: false,
-        response: response.data.recommendations 
+        response: response.data.recommendations,
       }));
     } catch (error) {
       console.error("API Error:", error);
-      
-      const errorMessage = error.response?.data?.error || error.message || "An unexpected error occurred";
-      
-      setApiState(prev => ({
+
+      const errorMessage =
+        error.response?.data?.error ||
+        error.message ||
+        "An unexpected error occurred";
+
+      setApiState((prev) => ({
         ...prev,
         loading: false,
-        error: errorMessage
+        error: errorMessage,
       }));
     }
   };
 
   return (
-    <section className="form">
-      {/* Industry component will go here */}
-      {validationErrors.industry && (
-        <div className="form__error-message">
-          {validationErrors.industry}
-        </div>
-      )}
-      
-      {/* Tools component will go here */}
+    <form className="form" onSubmit={handleSubmit}>
+      <IndustryDropdown
+        selectedIndustry={formData.industry}
+        onChange={handleIndustryChange}
+        error={validationErrors.industry}
+      />
+
+      <ProductsList
+        selectedTools={formData.tools}
+        onChange={handleToolsChange}
+        error={validationErrors.tools}
+      />
       {validationErrors.tools && (
-        <div className="form__error-message">
-          {validationErrors.tools}
-        </div>
+        <div className="form__error-message">{validationErrors.tools}</div>
       )}
-      
-      <ChallengesInput 
+
+      <ChallengesInput
         value={formData.painPoints}
         onChange={handleChallengesChange}
         error={validationErrors.painPoints}
       />
       {validationErrors.painPoints && (
-        <div className="form__error-message">
-          {validationErrors.painPoints}
-        </div>
+        <div className="form__error-message">{validationErrors.painPoints}</div>
       )}
-      
-      <ResponseWindow 
-        response={apiState.response}
-        loading={apiState.loading}
-      />
-      
+
+      <ResponseWindow response={apiState.response} loading={apiState.loading} />
+
       {apiState.error && (
         <div className="form__error-message form__error-message--api">
           An error occurred: {apiState.error}
         </div>
       )}
-      
-      <button 
+
+      <button
         onClick={handleSubmit}
         disabled={apiState.loading}
         className="form__submit-button"
       >
         {apiState.loading ? "Generating..." : "Get Recommendations"}
       </button>
-    </section>
+    </form>
   );
 };
 

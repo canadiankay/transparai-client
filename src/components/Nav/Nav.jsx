@@ -1,7 +1,11 @@
-import "./Nav.scss";
-import cartIcon from "../../assets/images/shopping-cart.svg";
-import microsoft from "../../assets/images/microsoft-logo.png";
+import './Nav.scss';
+import microsoft from "../../assets/images/microsoft-logo.svg";
 import searchIcon from "../../assets/images/search-icon.svg";
+// import chevronDown from "../../assets/images//chevron-down-24px.png";
+// import chevronRight from "../../images/chevron_right-24px.svg";
+import cartIcon from "../../assets/images/shopping-cart.svg";
+// import microsoft from "../../assets/images/microsoft-logo.png";
+// import searchIcon from "../../assets/images/search-icon.svg";
 
 function Nav() {
   return (
@@ -9,7 +13,7 @@ function Nav() {
       <section className="header-nav">
         <div className="nav-left">
           <img src={microsoft} alt="microsoft logo" className="nav-logo" />
-          <hr />
+          <div className='border'></div>
           <p className="nav-text">Small Business</p>
           <p className="nav-text">Surface</p>
           <p className="nav-text">Software</p>
