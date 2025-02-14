@@ -1,0 +1,13 @@
+@use "../../styles/partials/variables" as *;
+
+.footer {
+  display: flex;
+  width: 100%;
+  background-color: #f0f0f0;
+  margin-top: ($padding-margin-default * 6);
+
+  &__image {
+    width: auto;
+    margin: auto;
+  }
+}
