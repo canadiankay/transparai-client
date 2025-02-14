@@ -11,6 +11,8 @@ export default function ResponseWindow() {
     painPoints: "data management",
   });
 
+  console.log(setFormData);
+
   const generateResponse = async () => {
     if (loading) return;
     setLoading(true);
@@ -30,11 +32,8 @@ export default function ResponseWindow() {
   };
 
   return (
-    <section className="response-section">
+    <section className="response__container">
       <div className="response">
-        <button onClick={generateResponse} disabled={loading}>
-          {loading ? "Generating..." : "Generate Response"}
-        </button>
         <textarea
           className="response__box"
           readOnly
@@ -42,6 +41,9 @@ export default function ResponseWindow() {
           value={aiResponse}
         />
       </div>
+      <button onClick={generateResponse} disabled={loading}>
+        {loading ? "Generating..." : "Generate New Response"}
+      </button>
     </section>
   );
 }
