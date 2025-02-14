@@ -37,9 +37,14 @@
     }
 }
 
+.nav-logo {
+    padding: 1rem;
+    border-right: 2px solid $border-style;
+}
+
+
 .nav-left__logo {
     margin-right: 1.25rem;
-    border-right: 2px solid grey;
     width: 8rem;
 }
 
@@ -54,16 +59,16 @@
 
 .nav-subhead {
     width: 100%;
-    text-align: center;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #0076c3;
 
     &__text {
         color: white;
         font-family: $font-base;
-        font-size: $h2-font-size;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        font-size: 18px;
     }
 
     &__logo {

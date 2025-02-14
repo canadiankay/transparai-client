@@ -1,6 +1,17 @@
 @use "../src/styles/partials/globals" as *;
 @use "../src/styles/partials/variables" as *;
+@use "../src/styles/partials/mixins" as *;
 
 .app {
   background-color: $bg-white;
+}
+
+.content-wrapper {
+display: flex;
+margin: 0 auto;
+
+  @include desktop {
+    max-width: 1140px;
+
+  }
 }

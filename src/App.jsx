@@ -12,12 +12,19 @@ function App() {
     <>
       <Nav />
       <Hero />
-      <Form />
-      <ResponseWindow />
-      <ResourcesList />
-      <IndustryDropdown />
-      <ProductList />
-      <ResponseWindow />
+          <ResourcesList />
+          <section className="content-wrapper">
+          <div className="left-side">
+          <form>
+            <IndustryDropdown />
+            <ProductList />
+            <Form />
+          </form>
+        </div>
+        <div className="right-side">
+          <ResponseWindow />
+        </div>
+      </section>
     </>
   );
 }

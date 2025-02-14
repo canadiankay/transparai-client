@@ -13,7 +13,7 @@ function Nav() {
       <section className="header-nav">
         <div className="nav-left">
           <img src={microsoft} alt="microsoft logo" className="nav-logo" />
-          <hr />
+          <div className='border'></div>
           <p className="nav-text">Small Business</p>
           <p className="nav-text">Surface</p>
           <p className="nav-text">Software</p>

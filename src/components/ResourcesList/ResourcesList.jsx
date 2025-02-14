@@ -42,7 +42,7 @@ function ResourcesList() {
                             <p>
                                 {blurb.text}:{" "}
                                 <a href={blurb.url} target="_blank">
-                                    Read More
+                                    Learn More
                                 </a>
                             </p>
                         </div>
@@ -55,7 +55,7 @@ function ResourcesList() {
                             <p>
                                 {blurb.text}:{" "}
                                 <a href={blurb.url} target="_blank">
-                                    Read More
+                                    Learn More
                                 </a>
                             </p>
                         </div>
