@@ -1,0 +1,6 @@
+@use "../src/styles/partials/globals" as *;
+@use "../src/styles/partials/variables" as *;
+
+.app {
+  background-color: $bg-white;
+}

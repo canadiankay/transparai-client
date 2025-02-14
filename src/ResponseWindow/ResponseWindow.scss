@@ -1,6 +1,15 @@
+@use "../styles/partials/variables" as *;
+@use "../styles/partials/mixins" as *;
+
 .response {
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
   height: 500px;
   width: 800px;
+
   &__box {
     height: 100%;
     width: 50%;
