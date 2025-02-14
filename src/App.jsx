@@ -12,9 +12,9 @@ function App() {
       <Hero />
       <section className="content-wrapper">
         <div className="left-side-container">
-        <div className="left-side">
-          <Form />
-        </div>
+          <div className="left-side">
+            <Form />
+          </div>
         </div>
         <ResourcesList />
       </section>

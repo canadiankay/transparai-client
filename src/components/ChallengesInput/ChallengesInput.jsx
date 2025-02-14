@@ -6,9 +6,10 @@ const ChallengesInput = ({ value, onChange, error }) => {
       <label className="input__title">
         What challenges is your business facing?
       </label>
-      <p className="input__subtitle">Any additional copy</p>
+      <p className="input__subtitle">
+        Please describe the challenges your business is facing
+      </p>
       <textarea
-        placeholder="Please enter the challenges your business is facing."
         name="pain-points"
         value={value}
         onChange={onChange}
