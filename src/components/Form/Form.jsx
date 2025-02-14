@@ -115,14 +115,17 @@ const Form = () => {
       setApiState(prev => ({
         ...prev,
         loading: false,
-        response: response.data
+        response: response.data.recommendations 
       }));
     } catch (error) {
       console.error("API Error:", error);
+      
+      const errorMessage = error.response?.data?.error || error.message || "An unexpected error occurred";
+      
       setApiState(prev => ({
         ...prev,
         loading: false,
-        error: error.message
+        error: errorMessage
       }));
     }
   };
