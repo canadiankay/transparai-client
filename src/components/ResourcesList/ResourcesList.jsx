@@ -34,34 +34,33 @@ function ResourcesList() {
 
     return (
         <div className="resources">
-            <h1 className="resources-title">Resources:</h1>
+            <h1 className="resources-title">Additional resources to explore</h1>
             <div className="resources-container">
-                <div className="resources-group__1">
                     {firstGroup.map((blurb, index) => (
                         <div key={index} className="resource-blurb">
                             <p>
                                 {blurb.text}:{" "}
                                 <a href={blurb.url} target="_blank">
-                                    Read More
+                                    Learn More
                                 </a>
                             </p>
                         </div>
                     ))}
-                </div>
 
-                <div className="resources-group__2">
                     {secondGroup.map((blurb, index) => (
                         <div key={index} className="resource-blurb">
                             <p>
                                 {blurb.text}:{" "}
                                 <a href={blurb.url} target="_blank">
-                                    Read More
+                                    Learn More
                                 </a>
                             </p>
                         </div>
                     ))}
-                </div>
             </div>
+            <button className='secondary_button'>
+                Ask your questions
+            </button>
         </div>
     );
 }

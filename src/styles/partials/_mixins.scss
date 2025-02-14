@@ -29,13 +29,13 @@
 
 @mixin input-element {
   font-family: $font-base;
-  height: 2.25rem;
+  // height: 2.25rem;
   width: 100%;
   padding: $padding-margin-default;
   border: $border-style;
   border-bottom: 2px solid $primary-microsoft-black;
   background: transparent;
-  border-radius: 5px;
+  border-radius: 4px;
   color: $primary-text-black;
   font-size: $p-font-regular;
   line-height: $p-regular-line-height;

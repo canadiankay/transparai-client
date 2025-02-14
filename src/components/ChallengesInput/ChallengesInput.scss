@@ -9,19 +9,25 @@
   }
 
   &__title {
-    @include input-title;
+    font-family: $font-base;
+    font-size: 20px;
+    padding-bottom: 0.25rem;
+    font-weight: 600;
   }
 
   &__subtitle {
-    @include input-subtitle;
+    font-size: 0.85rem;
+    padding-bottom: 1.15rem;
   }
 
   &__input-textarea {
+    height: 600px;
     all: unset; //will remove all default styles
     outline: none;
     overflow-y: hidden;
     overflow-x: hidden;
     resize: none;
+    border:1px solid #d1d1d1;
     @include input-element;
   }
 }
