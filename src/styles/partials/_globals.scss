@@ -1,0 +1,57 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $bg-white;
+  font-family: $font-base;
+  color: $primary-text-black;
+}
+
+input,
+textarea {
+  font-family: $font-base;
+}
+
+h1 {
+  font-weight: $font-weight-bold;
+}
+
+h2 {
+  font-weight: $font-weight-semibold;
+}
+
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: $font-weight-default;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  font-family: $font-base;
+  font-weight: $font-weight-semibold;
+  font-size: $button-font-size;
+  height: $button-height;
+  padding: 0 $padding-cta-left-right;
+  border: none;
+  background: $primary-windows-blue;
+  color: $bg-white;
+  cursor: pointer;
+}
