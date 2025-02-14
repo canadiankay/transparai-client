@@ -38,7 +38,7 @@ export default function ResponseWindow() {
         <textarea
           className="response__box"
           readOnly
-          placeholder="AI response will appear here..."
+          placeholder="How can we help you today?"
           value={aiResponse}
         />
       </div>
