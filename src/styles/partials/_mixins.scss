@@ -11,3 +11,41 @@
     @content;
   }
 }
+
+@mixin input-title {
+  font-size: $h2-font-size;
+  line-height: $h2-line-height;
+  font-weight: $font-weight-semibold;
+  font-family: $font-base;
+}
+
+@mixin input-subtitle {
+  font-size: $p-font-regular;
+  line-height: $p-regular-line-height;
+  font-family: $font-base;
+  margin: 0;
+  margin-bottom: $padding-margin-default;
+}
+
+@mixin input-element {
+  font-family: $font-base;
+  height: 2.25rem;
+  width: 100%;
+  padding: $padding-margin-default;
+  border: $border-style;
+  border-bottom: 2px solid $primary-microsoft-black;
+  background: transparent;
+  border-radius: 5px;
+  color: $primary-text-black;
+  font-size: $p-font-regular;
+  line-height: $p-regular-line-height;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  word-wrap: break-word;
+  &::placeholder {
+    color: rgba(64, 64, 64, 0.5);
+  }
+  &:focus {
+    border-color: $primary-windows-blue;
+    box-shadow: 0 0 5px rgba(0, 120, 212, 0.5);
+  }
+}

@@ -48,8 +48,7 @@ button {
   font-family: $font-base;
   font-weight: $font-weight-semibold;
   font-size: $button-font-size;
-  height: $button-height;
-  padding: 0 $padding-cta-left-right;
+  padding: $padding-margin-default ($padding-margin-default * 2);
   border: none;
   background: $primary-windows-blue;
   color: $bg-white;
