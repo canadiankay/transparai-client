@@ -1,27 +1,39 @@
+import React from 'react';
 import "./IndustryDropdown.scss";
-
-export default function IndustryDropdown() {
+const IndustryDropdown = ({ selectedIndustry, onChange, error }) => {
+  const industries = [
+    { value: "Healthcare", label: "Healthcare" },
+    { value: "Financial Services", label: "Financial Services" },
+    { value: "Retail", label: "Retail" },
+    { value: "Manufacturing", label: "Manufacturing" },
+    { value: "Education", label: "Education" },
+    { value: "Government", label: "Government" },
+    { value: "Energy", label: "Energy" },
+    { value: "Telecommunications", label: "Telecommunications" },
+    { value: "Media and Communications", label: "Media and Communications" },
+    { value: "Automotive", label: "Automotive" }
+  ];
+  const handleChange = (event) => {
+    onChange(event.target.value);
+  };
   return (
-    <>
-      <div className="industry-dropdown">
-        <h2 className="industry-dropdown__header">Select your industry</h2>
-        <p className="industry-dropdown__copy">Any additional copy</p>
-        <select className="industry-dropdown__field">
-          <option value="">Choose your industry</option>
-          <option value="Healthcare">Healthcare</option>
-          <option value="Financial Services">Financial Services</option>
-          <option value="Retail">Retail</option>
-          <option value="Manufacturing">Manufacturing</option>
-          <option value="Education">Education</option>
-          <option value="Government">Government</option>
-          <option value="Energy">Energy</option>
-          <option value="Telecommunications">Telecommunications</option>
-          <option value="Media and Communications">
-            Media and Communications
+    <div className="industry-dropdown">
+      <h2 className="industry-dropdown__header">Select your industry</h2>
+      <p className="industry-dropdown__copy">Any additional copy</p>
+      <select
+        className={`industry-dropdown__field ${error ? 'industry-dropdown__field--error' : ''}`}
+        value={selectedIndustry}
+        onChange={handleChange}
+      >
+        <option value="">Choose your industry</option>
+        {industries.map(industry => (
+          <option key={industry.value} value={industry.value}>
+            {industry.label}
           </option>
-          <option value="Automotive">Automotive</option>
-        </select>
-      </div>
-    </>
+        ))}
+      </select>
+      {error && <div className="industry-dropdown__error">{error}</div>}
+    </div>
   );
-}
+};
+export default IndustryDropdown;
