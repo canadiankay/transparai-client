@@ -1,0 +1,48 @@
+.response {
+  height: 500px;
+  width: 800px;
+  &__box {
+    height: 100%;
+    width: 50%;
+    border-radius: 4px;
+    border-color: #d1d1d1;
+    border-bottom: 1px solid;
+    padding: 1rem;
+    color: #767676;
+    resize: none;
+
+    &:not(:placeholder-shown) {
+      color: black;
+      font-family: "Segoe UI", sans-serif;
+      font-size: 1rem;
+    }
+  }
+}
+
+textarea::placeholder {
+  font-family: "Segoe UI";
+}
+
+/* For webkit-based browsers (Chrome, Safari, Edge) */
+textarea::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background-color: #8a8a8a;
+  border-radius: 10px;
+}
+
+textarea::-webkit-scrollbar-thumb:hover {
+  background-color: #6e6e6e;
+}
+
+textarea::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+  border-radius: 10px;
+}
+
+textarea::-webkit-scrollbar-track-piece {
+  background-color: #f1f1f1;
+}
