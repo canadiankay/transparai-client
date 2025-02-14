@@ -1,0 +1,27 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.input {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  &__title {
+    @include input-title;
+  }
+
+  &__subtitle {
+    @include input-subtitle;
+  }
+
+  &__input-textarea {
+    all: unset; //will remove all default styles
+    outline: none;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    resize: none;
+    @include input-element;
+  }
+}
