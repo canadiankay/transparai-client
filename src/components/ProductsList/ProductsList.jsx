@@ -6,10 +6,20 @@ export default function IndustryDropdown() {
       <div className="products-list">
         <h2 className="products-list__header">Test</h2>
         <p className="products-list__copy">Any additional copy</p>
-        <form>
-        <input type="checkbox" id="checkbox1" name="option1" value="value1" />
-        <label for="checkbox1">Option 1</label>
-        </form>
+        <div className="products-list__options-container">
+        <input type="checkbox" id="checkbox1" name="option1" value="Microsoft 365" />
+        <label for="checkbox1">Microsoft 365 </label>
+        <input type="checkbox" id="checkbox2" name="option2" value="Microsoft Teams" />
+        <label for="checkbox2">Microsoft Teams</label>
+        <input type="checkbox" id="checkbox3" name="option3" value="Dynamics 365 Business Central" />
+        <label for="checkbox3">Dynamics 365 Business Central</label>
+        <input type="checkbox" id="checkbox4" name="option4" value="Dynamics 365 Sales" />
+        <label for="checkbox4">Dynamics 365 Sales</label>
+        <input type="checkbox" id="checkbox5" name="option5" value="Microsoft Power Platform" />
+        <label for="checkbox5">Microsoft Power Platform</label>
+        <input type="checkbox" id="checkbox6" name="option6" value="Surface for Business Devices" />
+        <label for="checkbox6">Surface for Business Devices</label>
+        </div>
       </div>
     </>
   );

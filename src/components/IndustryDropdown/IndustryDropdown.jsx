@@ -1,5 +1,4 @@
 import "./IndustryDropdown.scss";
-import dropdown from "../../images/dropdown.svg";
 
 export default function IndustryDropdown() {
   return (

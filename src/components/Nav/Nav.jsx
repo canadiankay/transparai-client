@@ -1,13 +1,11 @@
 import './Nav.scss';
-import cartIcon from "../../images/shopping-cart.svg"
-import microsoft from "../../images/microsoft-logo.svg";
-import searchIcon from "../../images/search-24px.svg";
-import chevronDown from "../../images/chevron-down-24px.png";
-import chevronRight from "../../images/chevron_right-24px.svg";
-import "./Nav.scss";
-import cartIcon from "../../assets/images/shopping-cart.svg";
-import microsoft from "../../assets/images/microsoft-logo.png";
+import microsoft from "../../assets/images/microsoft-logo.svg";
 import searchIcon from "../../assets/images/search-icon.svg";
+// import chevronDown from "../../assets/images//chevron-down-24px.png";
+// import chevronRight from "../../images/chevron_right-24px.svg";
+import cartIcon from "../../assets/images/shopping-cart.svg";
+// import microsoft from "../../assets/images/microsoft-logo.png";
+// import searchIcon from "../../assets/images/search-icon.svg";
 
 function Nav() {
   return (
