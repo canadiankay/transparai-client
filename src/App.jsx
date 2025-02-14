@@ -12,7 +12,6 @@ function App() {
       <Nav />
       <Hero />
       <Form />
-      <ResponseWindow />
       <ResourcesList />
       <Footer />
     </>
