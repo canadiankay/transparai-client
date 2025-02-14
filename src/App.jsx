@@ -8,12 +8,10 @@ import Form from "./components/Form/Form.jsx";
 function App() {
   return (
     <>
-      <h1>This is our Industry Project</h1>
-      <ResponseWindow />
       <Nav />
       <Hero />
       <Form />
-
+      <ResponseWindow />
       <ResourcesList />
     </>
   );
