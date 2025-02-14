@@ -10,10 +10,7 @@ function App() {
     <>
       <Nav />
       <Hero />
-<<<<<<< HEAD
-=======
       <Form />
->>>>>>> 45b392c4db0c36ea90b76bd70be012689fc14aa2
       <ResponseWindow />
       <ResourcesList />
     </>
