@@ -1,15 +1,45 @@
-
 $tablet-breakpoint: 768px;
 $desktop-breakpoint: 1280px;
 
+$primary-text-black: #0e1726;
 $primary-microsoft-black: #404040;
-$primary-bing-yellow: #FFB629;
-$primary-office-red: #EC3B06;
-$primary-skype-blue: #00BEF0;
-$primary-windows-blue: #0076C3;
+$primary-bing-yellow: #ffb629;
+$primary-office-red: #ec3b06;
+$primary-skype-blue: #00bef0;
+$primary-windows-blue: #0076c3;
 $primary-studio-purple: #662878;
 $primary-xbox-green: #179c50;
-
+$bg-white: #ffffff;
+$error-messages: #ff0000;
 
 $padding-margin-default: 0.5rem;
 
+$font-base: "Segoe UI", "SegoeUI", "Helvetica Neue", Helvetica, Arial,
+  sans-serif; //taken from microsoft website
+$font-weight-default: 400; //for all other fonts
+$font-weight-semibold: 600; //use for h2 and all other headings
+$font-weight-bold: 700; //use for h1 only
+
+$button-height: 2.375rem;
+
+// main h1
+$h1-font-size: 2rem;
+$h1-line-height: 2.5rem;
+
+// Subtitles
+$h2-font-size: 1.5rem;
+$h2-line-height: 2rem;
+
+//buttons
+$button-font-size: 0.875rem;
+$button-height: 1.375rem;
+
+//Input text and text options
+$p-font-regular: 1rem;
+$p-regular-line-height: 1.75rem;
+
+//smaller sub-input text
+$p-font-small: 0.75rem;
+$p-small-line-height: 1.125rem;
+
+$border-style: 1px solid #f2f2f2;
