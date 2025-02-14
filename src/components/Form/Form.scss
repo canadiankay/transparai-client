@@ -1,8 +1,14 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/globals" as *;
+
 .form {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
   gap: 1rem;
+  position: relative;
 
   &__error-message {
     color: #dc2626;
@@ -16,6 +22,26 @@
     &--api {
       margin-bottom: 1rem;
     }
+
+    // &__sumbit-button {
+    //   border-radius: 4px;
+    //   padding: 0.5rem 0.75rem;
+    //   border: none;
+    //   background: $primary-windows-blue;
+    //   color: $bg-white;
+    //   cursor: pointer;
+    // }
   }
   
 }
+
+.form__submit-button {
+  border-radius: 4px;
+  padding: 0.5rem 0.75rem;
+  border: none;
+  background: $primary-windows-blue;
+  color: $bg-white;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+

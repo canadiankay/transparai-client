@@ -19,7 +19,7 @@ const ProductsList = ({ selectedTools, onChange, error }) => {
   return (
     <div className="products-list">
       <h2 className="products-list__header">Are you using any of Microsoft Products?</h2>
-      <p className="products-list__copy">Choose from the list</p>
+      <p className="products-list__copy">Select all that apply</p>
       <div className="products-list__options-container">
         {products.map(product => (
           <div key={product.id} className="products-list__option">

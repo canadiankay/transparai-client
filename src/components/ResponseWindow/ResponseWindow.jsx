@@ -33,17 +33,13 @@ export default function ResponseWindow() {
 
   return (
     <section className="response__container">
-      <div className="response">
+      {/* <div className="response"> */}
         <textarea
           className="response__box"
           readOnly
           placeholder="How can we help you today?"
           value={aiResponse}
         />
-      </div>
-      <button onClick={generateResponse} disabled={loading}>
-        {loading ? "Generating..." : "Generate New Response"}
-      </button>
     </section>
   );
 }
