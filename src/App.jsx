@@ -4,6 +4,7 @@ import ResourcesList from "./components/ResourcesList/ResourcesList.jsx";
 import Nav from "./components/Nav/Nav.jsx";
 import Hero from "./components/Hero/Hero.jsx";
 import Form from "./components/Form/Form.jsx";
+import Footer from "./components/Footer/Footer.jsx";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Form />
       <ResponseWindow />
       <ResourcesList />
+      <Footer />
     </>
   );
 }
