@@ -1,14 +1,15 @@
-@use "../styles/partials/variables" as *;
-@use "../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography";
 
 .response {
+  height: 500px;
+  width: 800px;
+  
   &__container {
     display: flex;
     flex-direction: column;
   }
-
-  height: 500px;
-  width: 800px;
 
   &__box {
     height: 100%;
