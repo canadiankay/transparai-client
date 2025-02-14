@@ -1,0 +1,27 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography";
+
+.industry-dropdown {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin-left: -4rem;
+
+    &__header {
+        font-size: 20px;
+        padding-bottom: 0.25rem;
+    }
+
+    &__copy {
+        font-size: 0.85rem;
+        padding-bottom: 1.15rem;
+    }
+
+    &__field {
+        border: 1px solid #b8b7b7;
+        height: 2rem;
+        width: 312px;
+        border-radius: 4px;
+        font-family: $font-base;
+    }
+}

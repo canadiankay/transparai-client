@@ -1,0 +1,91 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography";
+
+.resources {
+    padding-top: 10rem;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #F2F2F2;
+    -webkit-box-shadow: 1px 3px 25px -18px rgba(195, 195, 195, 1);
+    -moz-box-shadow: 1px 3px 25px -18px rgba(195, 195, 195, 1);
+    box-shadow: 1px 3px 25px -18px rgba(195, 195, 195, 1);
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    padding-left: 18.5rem;
+    padding-right: 22rem;
+    border-radius: 4px;
+    margin-top: 10rem;
+    margin-bottom: 4rem;
+    
+
+    &-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto;
+        // width: 100%;
+    }
+
+    &-list {
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    &-title {
+        align-items: center;
+        font-family: $font-base;
+        color: $primary-text-black;
+        padding-bottom: 1.5rem;
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    // &-group__1 {
+    //     // border: 1px solid grey;
+    //     border-radius: 4px;
+    //     padding: 3rem;
+    //     background-color: #F2F2F2;
+    //     -webkit-box-shadow: 1px 3px 25px -18px rgba(195, 195, 195, 1);
+    //     -moz-box-shadow: 1px 3px 25px -18px rgba(195, 195, 195, 1);
+    //     box-shadow: 1px 3px 25px -18px rgba(195, 195, 195, 1);
+    // }
+
+    // &-group__2 {
+    //     border-radius: 4px;
+    //     padding: 3rem;
+    //     background-color: #F2F2F2;
+    //     -webkit-box-shadow: 1px 3px 25px -18px rgba(195, 195, 195, 1);
+    //     -moz-box-shadow: 1px 3px 25px -18px rgba(195, 195, 195, 1);
+    //     box-shadow: 1px 3px 25px -18px rgba(195, 195, 195, 1);
+    // }
+}
+
+.resource-blurb {
+    font-family: $font-base;
+    line-height: 1.3;
+    width: 400px;
+}
+
+a {
+    color: $primary-windows-blue;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.secondary_button {
+    margin-top: 1.5rem;
+    background-color: white;
+    border-radius: 4px;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid black;
+    color: black;
+}
+
+.resources-title {
+    font-size: 20px;
+    font-weight: 600;
+}

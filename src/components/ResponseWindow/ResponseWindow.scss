@@ -1,0 +1,70 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.response {
+  // height: 500px;
+  // width: 800px;
+  
+  &__box {
+    @include input-element;
+    height: 100%;
+    width: 440px;
+    border-radius: 4px;
+    // border-color: #d1d1d1;
+    // border-bottom: 2px solid;
+    padding: 1rem;
+    color: rgba(64, 64, 64, 0.5);
+    resize: none;
+    position: absolute;
+    right: -600px;
+    bottom: -30px;
+    padding-left: 10px;
+
+    &:not(:placeholder-shown) {
+      color: black;
+      font-family: "Segoe UI", sans-serif;
+      font-size: $p-font-regular;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $primary-windows-blue;
+    }
+  }
+}
+
+textarea::placeholder {
+  font-family: "Segoe UI";
+}
+
+/* For webkit-based browsers (Chrome, Safari, Edge) */
+textarea::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background-color: #8a8a8a;
+  border-radius: 10px;
+}
+
+textarea::-webkit-scrollbar-thumb:hover {
+  background-color: #6e6e6e;
+}
+
+textarea::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+  border-radius: 10px;
+}
+
+textarea::-webkit-scrollbar-track-piece {
+  background-color: #f1f1f1;
+}
+
+.generate-response__button {
+  position: absolute;
+  right: -600px;
+  bottom: -80px;
+  border-radius: 4px;
+  padding: 0.5rem 0.75rem;
+}

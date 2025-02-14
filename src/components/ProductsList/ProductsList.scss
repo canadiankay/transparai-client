@@ -1,0 +1,32 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography";
+
+.products-list {
+    padding-bottom: 2rem;
+    
+    &__header {
+        font-size: 20px;
+        padding-bottom: 0.25rem;
+    }
+
+    &__copy {
+        font-size: 0.85rem;
+        padding-bottom: 1.15rem;
+    }
+
+    &__option {
+        display: flex;
+        align-items: center;
+        padding-top: 0.25rem;
+    }
+}
+
+input {
+    margin-right: 0.5rem;
+}
+
+label {
+    font-family: $font-base;
+    font-size: 1rem;
+}
