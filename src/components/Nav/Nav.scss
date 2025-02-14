@@ -1,3 +1,5 @@
+@use '../../styles/partials/variables' as *;
+
 .nav {
     display: flex;
     justify-content: center;
@@ -18,7 +20,7 @@
     }
 
     &-logo {
-        margin-right: 1.25rem;
+        padding: 1rem;
         border-right: 2px solid grey;
     }
 
@@ -30,7 +32,7 @@
 .nav-subhead {
     width: 100%;
     text-align: center;
-    background-color: rgb(13, 13, 255);
+    background-color: $primary-windows-blue;
 
     &__text {
         color: white;

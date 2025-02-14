@@ -1,6 +1,6 @@
 import './Nav.scss';
 import cartIcon from "../../images/shopping-cart.svg"
-import microsoft from "../../images/microsoft-header.png";
+import microsoft from "../../images/microsoft-logo.svg";
 import searchIcon from "../../images/search-24px.svg";
 
 function Nav() {
