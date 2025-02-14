@@ -1,0 +1,20 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography";
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin: 1rem;
+
+    &-title {
+        font-family: $font-base;
+        font-size: $h1-font-size;
+    }
+
+    &-subhead {
+        font-family: $font-base;
+    }
+}
